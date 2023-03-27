@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link href="favicon.ico" rel="icon" type="image/x-icon" />
+    <title> Cool App</title>
+    <link rel="stylesheet" href="styles.css">
+   
+</head>
+<body>
+    <div class="mainCard">
+    <button  class="btnRegister" onclick="registerForm()">Register</button>
+    <h1 class="Title">Cool App</h1>
+    <img class="profile" src="user.png" alt="profile image">
+    <input class="inputEmail" type="email" placeholder="Email">
+    <input class="inputPassword" type="password" placeholder="password">
+    <button class="btnEnter" onclick="Login()">Enter</button>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script>
+function registerForm() {
+    document.getElementsByClassName("btnRegister")[0].innerHTML="Login";
+    document.getElementsByClassName("Title")[0].innerHTML="Register to Cool App";
+    document.getElementsByClassName("inputEmail")[0].innerHTML="Enter your email address";
+    document.getElementsByClassName("inputPassword")[0].innerHTML="Enter your Password";
+    document.getElementsByClassName("btnRegister")[0].innerHTML="Register";
+}
+function Login(){
+swal.fire({
+    position:"middle",
+    icon:"success",
+    title:"Register to Cool App",
+    showConfirmButton:false,
+    timer:1500
+})
+}
+    </script>
+</html>
